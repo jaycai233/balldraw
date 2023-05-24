@@ -21,7 +21,7 @@ const NumberCard: React.FC<numberCardProps> = ({ballNumber, highLight = false, s
       const checkIfInList = selectedBallList.includes(ballNumber);
       setIsSelect(checkIfInList);
     }
-  }, [ballNumber, selectedBallList])
+  }, [ballNumber, selectable, selectedBallList])
 
   return (
       <StyledNumberCard

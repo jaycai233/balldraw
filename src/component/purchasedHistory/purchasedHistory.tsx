@@ -25,7 +25,7 @@ const CurrentPlayTab = () => {
     )
 }
 
-const CompletedTab = () => {
+// const CompletedTab = () => {
     // const { completedTickets } = React.useContext(
     //     BallContext
     //   ) as BallContextProps;
@@ -41,16 +41,16 @@ const CompletedTab = () => {
     //         )}
     //     </>
     // )
-    return (
-        <>this is not done :(</>
-    )
-}
+//     return (
+//         <>this is not done :(</>
+//     )
+// }
 
 const PurchasedHistory = () => {
     const [selectedTab, setSelectedTab] = useState(0);
     const tabList = [
         { Title: 'In Play', content: CurrentPlayTab() },
-        { Title: 'Completed', content: CompletedTab() }
+        // { Title: 'Completed', content: CompletedTab() }
     ]
 
 

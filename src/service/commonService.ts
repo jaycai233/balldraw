@@ -27,7 +27,7 @@ const getOneRandomNumberInRange = (
   }
 
   const randomNum =
-    Math.floor(Math.random() * (numberMax - numberMin + 1)) + numberMin;
+    Math.floor(Math.random() * (numberMax - numberMin)) + numberMin;
 
   return randomNum
 };

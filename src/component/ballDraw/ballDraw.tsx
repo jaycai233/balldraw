@@ -15,7 +15,7 @@ const BallDraw = () => {
     const delay = (ms: number) => new Promise(res => setTimeout(res, ms));
 
     const getOneBallDraw = async() => {
-        while (tempArray.length < 10) {
+        while (tempArray.length < 20) {
 
             let duplicateNumber = true;
             while (duplicateNumber) {
@@ -30,7 +30,7 @@ const BallDraw = () => {
                 }
 
             }
-            if (tempArray.length >= 10) {
+            if (tempArray.length >= 20) {
                 setIsDisplaying(false)
             } else{
                 await delay(2000)
@@ -51,8 +51,7 @@ const BallDraw = () => {
             <StyledGetResultButton disabled={isDisplaying} onClick={() => getBallDraw()}> {!isDisplaying ? 'Get result' : <StyledLoadingSpin />}</StyledGetResultButton>
             <StyledBallDrawContainer>
                 {ballDrawnNumberList.map((each, index) => {
-                    // const random = Math.random() * 100;
-                    return <StyledBallNumber key={index * each} index={index}>{each}</StyledBallNumber>
+                    return <StyledBallNumber key={index } index={index}>{each}</StyledBallNumber>
                 }
                 )}
             </StyledBallDrawContainer>
