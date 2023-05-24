@@ -5,6 +5,10 @@ export const StyledBuyTicketContainer= styled.div`
     grid-template-columns: repeat(10,50px);
     justify-content: center;
     margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(8,40px);
+    }
 `
 
 export const StyledPurchaseButton = styled.button`

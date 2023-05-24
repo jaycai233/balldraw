@@ -41,10 +41,14 @@ export const StyledGetResultButton = styled.button`
 `
 
 export const StyledBallDrawContainer = styled.div`
-    display: flex;
-    width 60%; 
-    justify-content: center; 
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(10,50px);
+    justify-content: center;
+    margin-bottom: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(5,40px);
+    }
 `
 
 const fadeIn = keyframes `
@@ -62,10 +66,11 @@ interface BallNumberProps {
 export const StyledBallNumber = styled.div<BallNumberProps>`
     width: 30px;
     font-size: 1.2em; 
-    padding: 0.2em 0.5em; 
     border: 1px solid #565656; 
     border-radius: 5px; 
+    padding: 5px;
 
+    margin: 0 10px 5px 10px;
     // opacity: 0;
     // animation-name: ${fadeIn};
     // animation-duration: 1s;
@@ -75,4 +80,8 @@ export const StyledBallNumber = styled.div<BallNumberProps>`
     &:not(:last-child){
         margin-right:10px;
     } 
+
+    @media (max-width: 768px) {
+        padding: 0; 
+    }
 `
