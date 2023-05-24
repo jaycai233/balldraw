@@ -1,12 +1,15 @@
 import commonService from './commonService';
-import { NUMBER_MAX, NUMBER_MIN, NUMBER_SELECTED_COUNT } from './../constant';
+import { NUMBER_MAX, NUMBER_MIN } from './../constant';
 
-const getBall = () => {
-  return commonService.getRandomNumberInRange(NUMBER_MAX, NUMBER_MIN, NUMBER_SELECTED_COUNT);
+// const getBalls = () => {
+//   return commonService.getRandomNumberInRange(NUMBER_MAX, NUMBER_MIN, NUMBER_SELECTED_COUNT);
+// };
+
+const getOneBall = () => {
+  return commonService.getOneRandomNumberInRange(NUMBER_MAX, NUMBER_MIN);
 };
 
-
 const ballDrawService = {
-  getBall,
+  getOneBall
 };
 export default ballDrawService;

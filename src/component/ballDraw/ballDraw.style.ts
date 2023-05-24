@@ -66,11 +66,11 @@ export const StyledBallNumber = styled.div<BallNumberProps>`
     border: 1px solid #565656; 
     border-radius: 5px; 
 
-    opacity: 0;
-    animation-name: ${fadeIn};
-    animation-duration: 1s;
-    animation-delay: ${(props) => props.index * 2}s;
-    animation-fill-mode: forwards;
+    // opacity: 0;
+    // animation-name: ${fadeIn};
+    // animation-duration: 1s;
+    // animation-delay: ${(props) => props.index * 2}s;
+    // animation-fill-mode: forwards;
 
     &:not(:last-child){
         margin-right:10px;

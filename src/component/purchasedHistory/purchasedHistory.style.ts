@@ -35,9 +35,15 @@ export const StyledTab = styled.button<TabProps>`
     props.$isSelected ? '#c5202b' : '#e9f2f8'};
 `
 
-export const StyledList = styled.div`
+export const StyledItem = styled.div`
     display: flex;
     flex-direction: row;
     gap: 10px;
+    align-items: center;
+`
+
+export const StyledList = styled.div`
+    display: flex;
+    flex-direction: row;
     align-items: center;
 `

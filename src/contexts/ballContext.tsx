@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { NUMBER_SELECTED_COUNT } from '../constant';
 
 export interface BallContextProps {
@@ -13,6 +13,7 @@ export interface BallContextProps {
   addPurchasedTickets: (newTicket: number[]) => void;
   clearPurchasedTickets: () => void;
   movePurchasedTicketToCompleted: () => void;
+  forceUpdateContext: ()=>void;
 }
 
 interface Props {
@@ -26,6 +27,7 @@ const BallContextProvider: React.FC<Props> = ({ children }) => {
   const [purchasedTickets, setPurchasedTickets] = React.useState<number[][]>([]);
   const [completedTickets, setCompletedTickets] = React.useState<number[][]>([]);
   const [currentBallDrawnNumber, setCurrentBallDrawnNumber] = React.useState<number[]>([]);
+  const [,forceUpdateContext] =  useReducer(x => x + 1, 0);
 
 
   const saveNumber = (newNumber: number) => {
@@ -68,6 +70,7 @@ const BallContextProvider: React.FC<Props> = ({ children }) => {
     addPurchasedTickets,
     clearPurchasedTickets,
     movePurchasedTicketToCompleted,
+    forceUpdateContext
   };
 
   return <BallContext.Provider value={value}>{children}</BallContext.Provider>;

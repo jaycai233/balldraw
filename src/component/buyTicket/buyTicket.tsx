@@ -15,6 +15,7 @@ const BuyTicket = () => {
   }
   return (
     <>
+      <h1>Buy Tickets</h1>
       <StyledBuyTicketContainer>
         {allBallNumber.map((eachNumber, index) => (
           <NumberCard key={index} ballNumber={eachNumber}></NumberCard>
